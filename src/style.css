@@ -5,6 +5,8 @@ body {
     position: relative;
 }
 
+/* pageHeader */
+
 .pageHeader {
     box-sizing: border-box;
     height: 10rem;
@@ -49,6 +51,11 @@ body {
     width: 14rem;
     height: 5rem;
 }
+.pageHeader .topMenu {
+    cursor: pointer;
+}
+
+/* topBackground */
 
 .topBackground {
     height: 80rem;
@@ -89,6 +96,9 @@ body {
     height: 5rem;
     cursor: pointer;
 }
+
+/* mainBackground */
+
 .mainBackground {
     height: 150rem;
     padding: 0 32rem;
@@ -124,7 +134,7 @@ body {
 .mainBackground .mainBackgroundTitle {
     font-size: 4.8rem;
     font-weight: 700;
-    color: rgb(2, 7, 21);
+    color: #D97652;
     margin-bottom: 4rem;
 }
 .mainBackground .mainBackgroundText {
@@ -343,6 +353,19 @@ body {
     cursor: pointer;
 }
 
+.blind {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 8;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
 @media screen and (max-width: 1536px) {
     html {
         font-size: 8px;
@@ -355,15 +378,292 @@ body {
     }
 }
 
-.blind {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 8;
-    background-color: rgba(0, 0, 0, 0.7);
+@media screen and (max-width: 960px) {
+    html {
+        font-size: 5px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    html {
+        font-size: 2px;
+    }
+
+    /* pageHeader */
+
+    .pageHeader {
+        width: 100%;
+        padding: 10rem 10rem;
+        height: 38rem;
+    }
+    .pageHeader .topLogo img {
+        width: 17rem;
+        height: 24rem;
+    }
+    .pageHeader .topLogo p {
+        font-size: 14rem;
+    }
+    .pageHeader .topNav {
+        display: none;
+    }
+    .topMenu img {
+        width: 15rem;
+        height: 15rem;
+    }
+
+    /* topBackground */
+
+    .topBackground {
+        height: 300rem;
+        padding: 0 20rem;
+        justify-content: center;
+    }
+    .topBackground img{
+        height: 90rem;
+        width: 120rem;
+    }
+    .topBackground .introduction{
+        width: 130rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .introduction p:first-child {
+        font-size: 12rem;
+        font-weight: 700;
+        margin-bottom: 8rem;
+
+    }
+    .introduction p:nth-child(2) {
+        width: 80%;
+        margin-bottom: 4rem;
+        font-size: 5rem;
+    }
+    .introduction button {
+        border: none;
+        border-radius: 10rem;
+        font-weight: 700;
+        color: white;
+        background: rgb(210, 20, 20);
+        width: 50rem;
+        height: 20rem;
+        cursor: pointer;
+    }
+
+    /* mainBackground */
+
+    .mainBackground {
+        height: 700rem;
+        padding: 0 20rem;
+        box-sizing: border-box;
+        text-align: center;
+        position: relative;
+    }
+    .mainBackground .firstArticle {
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 35rem;
+    }
+    .firstArticle img {
+        border-radius: 15rem;
+        box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.3);
+        width: 150rem;
+        height: 105rem;
+        margin: 15rem 0;
+    }
+    .firstArticle div p {
+        text-align: center;
+    }
+    .firstArticle div p:first-child {
+        font-size: 12rem;
+        font-weight: 700;
+        margin-bottom: 15rem;
+    }
+    .firstArticle div p:last-child {
+        font-size: 7rem;
+    }
+    .mainBackground .mainBackgroundTitle {
+        font-size: 15rem;
+        margin-bottom: 8rem;
+    }
+    .mainBackground .mainBackgroundText {
+        font-size: 8rem;
+        margin-bottom: 25rem;
+    }
+    .mainBackground .mainImageBox {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 9rem;
+        white-space: nowrap;
+        overflow-x: scroll;
+    }
+    .mainImageBox img {
+        width: 100rem;
+        height: 100rem;
+        border: none;
+        border-radius: 3rem;
+        box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.3);
+    }
+    .mainImageBox img:nth-child(2) {
+        margin: 0 15rem;
+    }
+    .descriptionBox {
+        flex-direction: column;
+        margin-bottom: 9rem;
+    }
+    .descriptionBox p {
+        width: 100rem;
+        font-size: 7rem;
+        line-height: 8rem;
+        margin: 0;
+    }
+    .descriptionBox button {
+        width: 70rem;
+        height: 15rem;
+        margin-top: 10rem;
+        border-radius: 7.5rem;
+        font-size: 10rem;
+    }
+    .mainBackground .subScribe {
+        bottom: -20rem;
+        right: 24.5rem;
+        flex-direction: column;
+        width: 128rem;
+        height: 128rem;
+        border-radius: 3rem;
+        background-color: rgb(2, 7, 21);
+        color: white;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 15rem;
+    }
+    .subScribe .subScribeTextBox {
+        text-align: left;
+        margin-bottom: 10rem;
+    }
+    .subScribeTextBox p:first-child {
+        font-size: 12rem;
+        font-weight: 700;
+        margin-bottom: 15rem;
+    }
+    .subScribeTextBox p:last-child {
+        font-size: 7rem;
+    }
+    .subScribeBox {
+        position: relative;
+    }
+    .subScribeBox input {
+        padding-left: 14rem;
+        width: 100rem;
+        height: 13rem;
+        background-color: white;
+        border-radius: 6.5rem;
+        box-sizing: border-box;
+        background-image: url(../img/mail.png);
+        background-repeat: no-repeat;
+        background-position: 4rem center;
+        background-size: 7rem;
+        border: none;
+        font-size: 5rem;
+    }
+    .subScribeBox .subScribeButton {
+        width: 50rem;
+        height: 10rem;
+        position: relative;
+        border-radius: 5rem;
+        font-size: 6rem;
+        margin-right: -50rem;
+    }
+
+    /* catBackground */
+
+    .catBackground {
+        width: 100%;
+        height: 40rem;
+    }
+
+    /* footerBackground */
+
+    .footerBackground {
+        padding: 5rem 20rem;
+    }
+    .footerBackground .topLogo img {
+        width: 14rem;
+        height: 21rem;
+    }
+    .footerBackground .topLogo p {
+        font-size: 14rem;
+    }
+    .footerBackground .snsBox {
+        width: 45rem;
+    }
+    .snsBox a {
+        width: 10rem;
+        height: 10rem;
+        border: none;
+        background-color: #D97652;
+        border-radius: 50%;
+    }
+    .snsBox .blog{
+        background-image: url(../img/blogfill.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 10rem;
+    }
+    .snsBox .insta{
+        background-image: url(../img/instafill.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 10rem;
+    }
+    .snsBox .facebook{
+        background-image: url(../img/facebookfill.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 10rem;
+    }
+    .snsBox .youtube{
+        background-image: url(../img/youtubefill.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 10rem;
+    }
+
+    /* topArrow */
+
+    .topArrow {
+        width: 12rem;
+        height: 12rem;
+        right: 5rem;
+        bottom: 20rem;
+    }
+
+    /* modalBox */
+
+    .modalBox {
+        width: 120rem;
+        height: 120rem;
+    }
+    .modalBox img {
+        width: 50rem;
+        height: 50rem;
+    }
+    .modalBox p {
+        font-size: 16rem;
+    }
+    .modalBox .sendMessage {
+        font-size: 5rem;
+    }
+    .modalBox .modalCloseButton {
+        background-color: #D97652;
+        color: white;
+        border: none;
+        width: 30rem;
+        height: 10rem;
+        border-radius: 5rem;
+        cursor: pointer;
+    }
 }
