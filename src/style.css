@@ -52,6 +52,7 @@ body {
     height: 5rem;
 }
 .pageHeader .topMenu {
+    display: none;
     cursor: pointer;
 }
 
@@ -405,6 +406,9 @@ body {
     }
     .pageHeader .topNav {
         display: none;
+    }
+    .pageHeader .topMenu {
+        display: block;
     }
     .topMenu img {
         width: 15rem;
